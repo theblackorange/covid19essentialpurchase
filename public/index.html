@@ -3,34 +3,69 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Essentials</title>
 </head>
 <body>
-    <div class="header-navigation">
-        <br>
-        <br>
-        <nav>
-            <ul>
-                <li><a class="anchor-background" href='index.html'>Home</a></li>
-                <li><a class="anchor-background" href='medical.html'>Medical</a></li>
-                <li><a class="anchor-background" href='groceries.html'>Groceries</a></li>
-                <li><a class="anchor-background" href='precaution.html'>Precaution</a></li>
-                <li><a class="anchor-background" href='about.html'>About</a></li>
+    <br>
+    <br>
+    <br>
+    <nav>
+        <div class="nav nav-tabs offset-4 col-4" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Register</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Login</a>
+        </div>
+    </nav>
+    <div class="tab-content offset-4 col-4" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <form>
+                <div class="form-group">
+                    <label class="loginRegister" for="InputName">Name</label>
+                    <input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Enter Name">  
+                </div>
+                <div class="form-group">    
+                    <label class="loginRegister" for="InputEmail">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">    
+                    <label class="loginRegister" for="InputPhoneNumber">Enter Phone Number</label>
+                    <input type="number" class="form-control" id="InputPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Number">
+                </div>
+                <div class="form-group">    
+                    <label class="loginRegister" for="InputPassword">Enter Password</label>
+                    <input type="password" class="form-control" id="InputPassword" aria-describedby="emailHelp" placeholder="Enter Password">
+                </div>
+                <div class="form-group">    
+                    <label class="loginRegister" for="InputConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="InputConfirmPassword" aria-describedby="emailHelp" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <form>
+                <div class="form-group">
+                  <label class="loginRegister" for="InputEmail">Email</label>
+                  <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label class="loginRegister" for="InputPassword1">Password</label>
+                  <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
 
-            </ul>
-        </nav>
-    </div>
-    <div class="covid-19-fixed">
-        <span>Total Cases: </span><span id="totalCases"></span><br>
-        <span>Total Recovered: </span><span id="totalRecovered"></span><br>
-        <span>Total Death: </span><span id="totalDeath"></span><br>
-        <span>Total Active: </span><span id="totalActive"></span><br>
+        </div>
     </div>
 
     <script src='app.js'></script>    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

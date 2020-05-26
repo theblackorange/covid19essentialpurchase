@@ -73,3 +73,6 @@ nav ul li a:hover::before{
     display: block;
     font-weight: bolder;
 }
+.loginRegister{
+    color: whitesmoke;
+}
