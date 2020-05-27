@@ -20,3 +20,14 @@ const mongoose=require('mongoose');
 const uri='mongodb+srv://essential:essential@cluster0-jkthk.mongodb.net/test?retryWrites=true&w=majority'
 const connectDB=mongoose.connect(uri, { useNewUrlParser: true , useUnifiedTopology: true });
 
+const seller = require('./routes/seller');
+app.use('/seller',seller);
+
+const login = require('./routes/login');
+app.use('/login',login);
+
+const medical = require('./routes/medical');
+app.use('/medical',medical);
+
+const groceries = require('./routes/groceries');
+app.use('/grocery',groceries);
