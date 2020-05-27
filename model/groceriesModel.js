@@ -14,6 +14,16 @@ const groceriesSchema=mongoose.Schema({
     {
         type: String,
         required: true
+    },
+    description:
+    {
+        type: String,
+        requried: true
+    },
+    price:
+    {
+        type: Number,
+        required: true
     }
 });
 module.exports=mongoose.model('Groceries',groceriesSchema);

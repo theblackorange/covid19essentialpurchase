@@ -76,3 +76,7 @@ nav ul li a:hover::before{
 .loginRegister{
     color: whitesmoke;
 }
+
+#registerSubmit{
+    background-color: coral;   
+}

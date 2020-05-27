@@ -20,8 +20,10 @@
     </nav>
     <div class="tab-content offset-4 col-4" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <br>
             <form>
                 <div class="form-group">
+
                     <label class="loginRegister" for="InputName">Name</label>
                     <input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Enter Name">  
                 </div>
@@ -42,10 +44,22 @@
                     <label class="loginRegister" for="InputConfirmPassword">Confirm Password</label>
                     <input type="password" class="form-control" id="InputConfirmPassword" aria-describedby="emailHelp" placeholder="Confirm Password">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="dropdown form-group">
+                    <label for="city" class="loginRegister">City</label>
+
+                    <select name="city" class="form-control" id="city">
+                      <option value="Delhi">Delhi </option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Pune">Pune</option>
+                      <option value="Hyderbad">Hyderbad</option>
+                      <option value="Ahemdabad">Ahemdabad</option>
+                    </select>     
+                </div>
+                <button type="submit" id="registerSubmit" class="btn btn-primary">Submit</button>
               </form>
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <br>
             <form>
                 <div class="form-group">
                   <label class="loginRegister" for="InputEmail">Email</label>
