@@ -1,0 +1,25 @@
+{
+  "name": "hackathon2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Venky",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theblackorange/covid19essentialpurchase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theblackorange/covid19essentialpurchase/issues"
+  },
+  "homepage": "https://github.com/theblackorange/covid19essentialpurchase#readme",
+  "description": ""
+}
