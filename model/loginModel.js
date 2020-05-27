@@ -8,11 +8,18 @@ const loginSchema=mongoose.Schema({
     email:
     {
         type: String,
-        required: true
+        required: true,
+        unique:true
     },
     phoneNumber:
     {
         type: Number,
+        required: true,
+        unique:true
+    },
+    city:
+    {
+        type: String,
     },
     address:
     {
