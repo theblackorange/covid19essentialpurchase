@@ -80,3 +80,34 @@ nav ul li a:hover::before{
 #registerSubmit{
     background-color: coral;   
 }
+
+.precautionBackground{
+    background-color: lightgray;
+}
+
+.completeWidth{
+    width: 100%;
+    height: 150px;
+}
+
+.btnSameBackground{
+    background-color: lightgray;
+    text-align: right;
+    align-self: center;
+}
+
+.imageRound{
+    border-radius: 50%;
+    height: 20%;
+    width: 20%;
+}
+
+.textCenter
+{
+    text-align: center;
+}
+
+.developersProperties{
+    padding: 5px;
+    font-size: large;
+}
