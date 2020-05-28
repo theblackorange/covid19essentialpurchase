@@ -6,7 +6,7 @@ const groceriesModel=require('../model/groceriesModel');
 
 
 router.post('/postDetails', function(req,res){
-    const newProduct = new medicalModel({
+    const newProduct = new groceriesModel({
         productCode: req.body.productCode,
         productName: req.body.productName,
         quantity: req.body.quantity,

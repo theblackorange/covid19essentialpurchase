@@ -1,5 +1,10 @@
 const mongoose=require('mongoose');
 const groceriesSchema=mongoose.Schema({
+    productCode:
+    {
+        type: Number,
+        required: true
+    },
     productName:
     {
         type: String,
