@@ -1,0 +1,82 @@
+body{
+    background-image: url('background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header-navigation{
+    text-align: center;
+    display: block;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
+
+.anchor-background{
+    background-color:lightgray;
+    padding: 10px;
+    color: black;
+    border-radius: 10% 10% 10% 10%;
+}
+
+nav ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    padding:25px 25px;
+    position: relative;
+    
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    
+    
+}
+
+nav ul li a:hover{
+    color: coral;
+}
+
+nav ul li a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    position: absolute;
+    background-color: coral;
+    top: 0;
+    width: 0%;
+    transition: ease-in-out 230ms;
+}
+
+nav ul li a:hover::before{
+    width:70%;
+
+}
+
+.covid-19-fixed{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    color: black;
+    background-color:coral;
+    border-radius: 10% 10% 10% 10%;
+    text-align: center;
+    display: block;
+    font-weight: bolder;
+}
+.loginRegister{
+    color: whitesmoke;
+}
+
+#registerSubmit{
+    background-color: coral;   
+}
