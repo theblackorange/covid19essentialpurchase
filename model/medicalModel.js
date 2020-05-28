@@ -1,5 +1,10 @@
 const mongoose=require('mongoose');
 const medicalSchema=mongoose.Schema({
+    productCode:
+    {
+        type: Number,
+        required: true
+    },
     productName:
     {
         type: String,
