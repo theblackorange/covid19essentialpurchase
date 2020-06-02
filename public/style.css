@@ -111,3 +111,29 @@ nav ul li a:hover::before{
     padding: 5px;
     font-size: large;
 }
+
+.centerElement{
+    align-content: center;
+}
+
+.cart{
+    float: right;
+    margin-right: 2px;
+    padding: 5px;
+}
+
+.cart img{
+    height: 60px;
+    width: 60px;
+    border-radius: 30%;
+}
+
+.centerElementButton{
+    border-radius: 10%;
+    bottom: 0;
+    right: 0;      
+}
+
+.amountFloat{
+    float: right;
+}

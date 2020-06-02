@@ -3,7 +3,8 @@ const medicalSchema=mongoose.Schema({
     productCode:
     {
         type: Number,
-        required: true
+        required: true,
+        unique:true
     },
     productName:
     {
