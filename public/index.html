@@ -9,6 +9,7 @@
     <title>Essentials</title>
 </head>
 <body>
+    <marquee style="color: red;">Currently, delivering to Delhi, Mumbai, Pune, Hyderbad, Ahemdabad only</marquee>
     <br>
     <br>
     <br>
@@ -21,28 +22,34 @@
     <div class="tab-content offset-4 col-4" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <br>
-            <form>
+            
+            
+            
+            <form method="POST" action="/login/register">
                 <div class="form-group">
 
                     <label class="loginRegister" for="InputName">Name</label>
-                    <input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Enter Name">  
+                    <input name="name" required type="text" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Enter Name">  
                 </div>
                 <div class="form-group">    
                     <label class="loginRegister" for="InputEmail">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input name="email" required type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">    
                     <label class="loginRegister" for="InputPhoneNumber">Enter Phone Number</label>
-                    <input type="number" class="form-control" id="InputPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Number">
+                    <input name="phoneNumber" required type="number" class="form-control" id="InputPhoneNumber" aria-describedby="emailHelp" placeholder="Enter Number">
                 </div>
                 <div class="form-group">    
                     <label class="loginRegister" for="InputPassword">Enter Password</label>
-                    <input type="password" class="form-control" id="InputPassword" aria-describedby="emailHelp" placeholder="Enter Password">
+                    <input name="password" required type="password" class="form-control" id="InputPassword" aria-describedby="emailHelp" placeholder="Enter Password">
                 </div>
                 <div class="form-group">    
                     <label class="loginRegister" for="InputConfirmPassword">Confirm Password</label>
-                    <input type="password" class="form-control" id="InputConfirmPassword" aria-describedby="emailHelp" placeholder="Confirm Password">
+                    <input required type="password" class="form-control" id="InputConfirmPassword" aria-describedby="emailHelp" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <label class="loginRegister" id="errorPassword"></label>
                 </div>
                 <div class="dropdown form-group">
                     <label for="city" class="loginRegister">City</label>
@@ -55,31 +62,32 @@
                       <option value="Ahemdabad">Ahemdabad</option>
                     </select>     
                 </div>
-                <button type="submit" id="registerSubmit" class="btn btn-primary">Submit</button>
+                <button id="registerSubmit" type="submit" class="btn btn-primary" >Submit</button>
               </form>
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <br>
-            <form>
+            <form method="POST" action="/login/successfull"> 
                 <div class="form-group">
-                  <label class="loginRegister" for="InputEmail">Email</label>
-                  <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                  <label class="loginRegister" for="InputEmail1">Email</label>
+                  <input name="email" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label class="loginRegister" for="InputPassword1">Password</label>
-                  <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+                  <input name="password" type="password" class="form-control" id="InputPassword1" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
               </form>
+              <div id="error"></div>
 
         </div>
     </div>
-
-    <script src='app.js'></script>    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>    
+    
 </body>
 
 </html>

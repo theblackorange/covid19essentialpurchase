@@ -6,13 +6,18 @@ app.listen(8000,function(){});
 
 const bodyParser=require('body-parser');
 app.use(bodyParser.json());
-
+app.use(bodyParser.urlencoded({extended:true}));
+//app.use(cors());
 //making front end public
 app.use(express.static(__dirname+'/public'));
 
 //starting index.html from localhost
 app.get('/',(req,res)=>{
     res.sendFile(__dirname+'/public/index.html');
+})
+
+app.get("/medicalPageLoad", (req, res)=>{
+    res.sendFile(__dirname+'/public/medical.html');
 })
 
 //mongoDB connection

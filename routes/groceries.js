@@ -19,7 +19,7 @@ router.post('/postDetails', function(req,res){
 });
 
 router.get('/productDetails', function(req,res){
-    medicalModel.find()
+    groceriesModel.find()
     .exec()
     .then(products=>{
         res.json(products).status(200);

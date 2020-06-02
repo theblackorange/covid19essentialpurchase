@@ -1,6 +1,9 @@
 const express= require('express');
 const router=express.Router();
 const mongoose=require('mongoose');
+const jwt=require('jsonwebtoken');
+
+
 
 const loginModel=require('../model/loginModel');
 
@@ -14,9 +17,29 @@ router.post('/register',function(req,res){
         password: req.body.password
     });
     newRegister.save();
-    res.json('successfully registered').status(201);
+    //res.sendFile('/home/venky/codingCodeAsylum/branchesEssential/covid19essentialpurchase/public/medical.html');
+    res.redirect("/medicalPageLoad");
 })
 
+router.post('/successfull', function(req, res){
+    const emailId = req.body.email;
+    const pass = req.body.password;
+    console.log(req.body.email);
+    loginModel.find({email: emailId})
+    .exec()
+    .then(details=>{
+        //if(details.length==0){
+        //res.json(false).status(200);
+    //}
+    if(pass===details[0].password)
+    {
+        res.redirect("/medicalPageLoad");
+    }
+    else{
+        res.json(false).status(200);
+    }
+})
+})
 router.get('/email/:email/password/:password', function(req,res){
     const emailId = req.params.email;
     const pass = req.params.password;
@@ -28,6 +51,7 @@ router.get('/email/:email/password/:password', function(req,res){
         }
         else if(pass===details[0].password)
         {
+            res.redirect("/medicalPageLoad");
             res.json(true).status(200);
         }
         else{
